@@ -4,11 +4,14 @@
 /node_modules
 /.pnp
 .pnp.js
+/frontend/.vscode
 
 # testing
 /coverage
 
 # next.js
+/frontend/.next/*
+/frontend/.next/
 /.next/
 /out/
 
