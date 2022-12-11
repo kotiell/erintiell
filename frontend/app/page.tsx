@@ -1,58 +1,22 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 
 export default function Home() {
+  const titleStyle = "font-bold text-2xl";
+  const paraStyle = "mb-3.5 leading-tight";
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js 13!</a>
-        </h1>
+    <div className="container mx-auto">
+      <h3 className={titleStyle}>Campaign architect, communications conduit, detail spelunker.</h3>
+      <p className={paraStyle}>I am a self-starting, fastidious individual. I thrive in a team environment, can work independently and also carry great project management skills.</p>
 
-        <div className="text-3xl underline">Hello </div>
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
+      <h3 className={titleStyle}>2016-present</h3>
+      <p className={paraStyle}>Align and drive company strategy and external brand preference through effective communications and marketing project execution.</p>
 
-        <div className={styles.grid}>
-          <a href="https://beta.nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js 13</p>
-          </a>
+      <h3 className={titleStyle}>2011-2016</h3>
+      <p className={paraStyle}>Communicated to our customers to drive sales leads and improve profit. </p>
+      <p className={paraStyle}>Used creative methods to deliver communications to 21,000 employees through traditional and innovating channels.</p>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Explore the Next.js 13 playground.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates/next.js/app-directory?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>Deploy your Next.js site to a public URL with Vercel.</p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <h3 className={titleStyle}>2007-2011</h3>
+      <p className={paraStyle}>Provided developmental support to the Executive Director in multiple and various roles to our local chapter of the American Red Cross. </p>
+      <p className={paraStyle}>Aided our chapter to become one of three chapters in the state of Ohio to receive the Highly Performing Chapter award for the 2008-2009 fiscal year.</p>
     </div>
   )
 }
