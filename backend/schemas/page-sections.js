@@ -9,6 +9,19 @@ export default {
       title: 'Section Name',
     },
     {
+      name: 'pageTitle',
+      type: 'object',
+      description: 'This is the page it goes own.',
+      fields: [
+        {
+          title: 'Select Page',
+          name: 'pageTitle1',
+          type: 'reference',
+          to: [{ type: 'pageType' }]
+        }
+      ]
+    },
+    {
       name: 'content',
       type: 'array',
       title: 'Content',

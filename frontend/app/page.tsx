@@ -1,5 +1,18 @@
 
-export default function Home() {
+import { createClient } from "next-sanity";
+
+export default async function Home() {
+
+  const client = createClient({
+    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    apiVersion: process.env.NEXT_PUBLIC_SANITY_APIVERSION,
+    useCdn: false,
+  });
+
+  //const data = await client.fetch(`*[_type == "pageElement"]{"pageTypes":pageTitle[]}`)
+  const data = await client.fetch(`*[_type == "pageElement" && pageTitle1 == "Home Page"]`);
+  console.log(data);
   const titleStyle = "font-bold text-2xl";
   const paraStyle = "mb-3.5 leading-tight";
   return (
