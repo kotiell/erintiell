@@ -10,16 +10,22 @@ export default async function Home() {
     useCdn: false,
   });
 
-  //const data = await client.fetch(`*[_type == "pageElement"]{"pageTypes":pageTitle[]}`)
-  const data = await client.fetch(`*[_type == "pageElement" && pageTitle1 == "Home Page"]`);
-  console.log(data);
+  const data = await client.fetch(`
+    *[_type == "pageType" ]{
+      _id, _type, 
+      "pageSection": *[_type == "pageElement" && references(^._id)].content
+    }`);
+
+  //const data = await client.fetch(`*[_type == "pageElement" && pageTitle1mu == "Home Page"]`);
+
   const titleStyle = "font-bold text-2xl";
   const paraStyle = "mb-3.5 leading-tight";
   return (
-    <div className="container mx-auto">
+    <div className="container">
       <h3 className={titleStyle}>Campaign architect, communications conduit, detail spelunker.</h3>
       <p className={paraStyle}>I am a self-starting, fastidious individual. I thrive in a team environment, can work independently and also carry great project management skills.</p>
 
+      <h2 text-3xl> Past Work</h2>
       <h3 className={titleStyle}>2016-present</h3>
       <p className={paraStyle}>Align and drive company strategy and external brand preference through effective communications and marketing project execution.</p>
 

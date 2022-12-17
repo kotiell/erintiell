@@ -8,6 +8,10 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      screens:{
+        xl: '11200px',
+        '2xl': '1246px',
+      }
     },
   },
   plugins: [],
