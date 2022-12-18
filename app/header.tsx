@@ -1,5 +1,5 @@
 import Image from "next/image";
-import FunPic from "../public/images/fun-portrait.jpg";
+import ProfPic from "../public/images/prof-portrait.jpg";
 
 export default function Header() {
   return (
@@ -7,7 +7,7 @@ export default function Header() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         <div className="cols-span-12 md:col-span-3 ">
       <Image
-        src={FunPic}
+        src={ProfPic}
         alt="Erin Tiell"
         className="rounded-md"
       />
