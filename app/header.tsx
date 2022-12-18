@@ -10,6 +10,7 @@ export default function Header() {
         src={ProfPic}
         alt="Erin Tiell"
         className="rounded-md"
+        width="400"
       />
         </div>
         <div className="cols-span-12 md:col-span-5 flex flex-col justify-center">
