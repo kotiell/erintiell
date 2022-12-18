@@ -1,4 +1,5 @@
 import './globals.css'
+import Header from "./header";
 
 export default function RootLayout({
   children,
@@ -13,12 +14,7 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <header className="container mx-auto">
-          <div className="h-52 flex flex-col justify-center">
-            <h1 className="text-6xl mt-4 font-extralight">Erin Tiell</h1>
-            <p className="text-lg font-light">Marketing and communications professional with more than 10 years of proven results.</p>
-          </div>
-        </header>
+        <Header />
         {children}
       </body >
     </html >
