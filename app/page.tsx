@@ -1,27 +1,10 @@
 
-import { createClient } from "next-sanity";
 import Image from "next/image";
 import Hub from "../public/icons/hub.svg";
 import Insights from "../public/icons/insights.svg";
 import Awesome from "../public/icons/awesome.svg";
 
 export default async function Home() {
-
-  const client = createClient({
-    projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-    dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
-    apiVersion: process.env.NEXT_PUBLIC_SANITY_APIVERSION,
-    useCdn: false,
-  });
-
-  const data = await client.fetch(`
-    *[_type == "pageType" ]{
-      _id, _type, 
-      "pageSection": *[_type == "pageElement" && references(^._id)].content
-    }`);
-
-  //const data = await client.fetch(`*[_type == "pageElement" && pageTitle1mu == "Home Page"]`);
-
   const titleStyle = "font-light text-3xl";
   const paraStyle = "mb-2.5 leading-tight";
   return (
